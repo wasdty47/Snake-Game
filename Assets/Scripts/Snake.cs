@@ -13,19 +13,24 @@ public class Snake : MonoBehaviour
     private Rigidbody2D rb; 
     private Vector2 snakeDir = Vector2.left; // move left by deafult
 
-    List<Transform> segments = new List<Transform>();
+    private List<Transform> segments = new List<Transform>();
 
     private void Start(){
         
         rb = GetComponent<Rigidbody2D>();
         
         segments.Add(this.transform);
-
     
     }
 
     private void Update(){
+    
+        GetInput();
+        Move();
+    
+    }
 
+    private void GetInput(){
 
         if(Input.GetKeyDown(KeyCode.W)){
             snakeDir = Vector2.up;
@@ -36,8 +41,6 @@ public class Snake : MonoBehaviour
         }else if(Input.GetKeyDown(KeyCode.S)){
             snakeDir = Vector2.down;
         }
-
-        Move();
 
     }
 
