@@ -64,8 +64,13 @@ public class Snake : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col){
 
         if(col.name == "food"){
+
+            Vector3 spawnPoint = new Vector3(segments[segments.Count-1].position.x, 
+                                             segments[segments.Count-1].position.y, 
+                                             transform.position.z) - (Vector3)snakeDir;
+
             Transform segment = Instantiate(segmentPrefab, 
-                                            this.transform.position + new Vector3(snakeDir.x, snakeDir.y, this.transform.position.x), 
+                                            spawnPoint, 
                                             Quaternion.identity);
             
             segments.Add(segment);
@@ -73,7 +78,6 @@ public class Snake : MonoBehaviour
         }else{
 
             SceneManager.LoadScene(0);
-
 
         }
     }
