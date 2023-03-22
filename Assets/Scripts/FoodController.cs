@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Food : MonoBehaviour
+public class FoodController : MonoBehaviour
 {
 
     public UnityEvent OnSnakeEat;
