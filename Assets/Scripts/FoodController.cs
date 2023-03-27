@@ -4,8 +4,6 @@ using UnityEngine.Events;
 public class FoodController : MonoBehaviour
 {
 
-    public UnityEvent OnSnakeEat;
-
     private Rigidbody2D _rb;
 
     private void Start(){
@@ -15,7 +13,7 @@ public class FoodController : MonoBehaviour
 
     }
 
-    private void RandomizePos(){
+    public void RandomizePos(){
 
         float x = Random.Range(-13f, 13f);
         float y = Random.Range(-7f, 7f);
@@ -24,7 +22,7 @@ public class FoodController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(){
-        OnSnakeEat?.Invoke();
+        ScoreController.Instance.IncrementScore();
         RandomizePos();
     }
 

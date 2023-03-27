@@ -814,7 +814,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: ef23ee5d5855fc5409b5ff72af2821ae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.1273585, g: 1, b: 0.20579816, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -898,8 +898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e127d48634b6141aa23d1e89372e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segmentPrefab: {fileID: 5196065241749944244, guid: 0d113c4d6ecf6b842904154bf83374dd, type: 3}
-  timeForMove: 0.3
+  _segmentPrefab: {fileID: 5196065241749944244, guid: 0d113c4d6ecf6b842904154bf83374dd, type: 3}
+  _timeForMove: 0.15
 --- !u!1 &1851881564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,21 +1140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba5116001a780184099e4b17f39ccba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnSnakeEat:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1851881568}
-        m_TargetAssemblyTypeName: ScoreController, Assembly-CSharp
-        m_MethodName: IncrementScore
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1995648625
 GameObject:
   m_ObjectHideFlags: 0
